@@ -1,0 +1,309 @@
+:root{
+    --primary-color: #e50914;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #999;
+    color: #ffff;
+
+}
+
+ul{
+    list-style: none;
+}
+
+h1, h2, h3, h4{
+    color: white;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+p{
+    color: #fff;
+    margin: 0.7rem 0.9rem;
+}
+img{
+    width: 100%;
+}
+
+.showcase{
+    width: 100%;
+    height: 650px;
+    position: relative;
+    background: url("../Netflix_background.jpg") no-repeat center center/cover;
+}
+.showcase::after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: inset 52px 74px 75px #000000,  inset -120px -100px 250px #000000;
+}
+
+.showcase-top{
+    position: relative;
+    height: 100px;
+    z-index: 2;
+}
+.showcase-top img{
+    width: 133px;
+    position: absolute;
+    top: 19%;
+    left: 4%;
+    transform: translate(2%, 19%);
+}
+.showcase-top a{
+    position: absolute;
+    top: 24%;
+    right: 4%;
+}
+
+.showcase-content{
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    height: 470px;
+}
+.showcase-content h1{
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.1;
+}
+.showcase-content h3{
+    font-weight: 100;
+    margin-top:20px;
+    font-size: 30px;
+}
+.showcase-content p{
+    color: #fff;
+    font-weight: 100;
+    margin-top:20px;
+}
+.showcase-content input{
+    padding: 0.5rem 5rem;
+}
+
+.showcase-content a{
+    display: inline-block;
+}
+
+
+/*Titlecards section */
+
+.titlecards{
+    position: relative;
+    height: 440px;
+    background-color: black;
+    border-top: 6px solid rgb(43, 42, 42);
+    border-bottom: 6px solid rgb(43, 42, 42);
+}
+.our-titlecards h1{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 46%;
+    left: 20%;
+}
+.our-titlecards p{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 55%;
+    left: 15%;
+}
+.first-titlecards{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 10%;
+    right: 10%;
+}
+.first-titlecards::after{
+    content: "";
+    position: absolute;
+    background: url("https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png") no-repeat center center/cover;
+    top: 0%;
+    right: 0%;
+    height: 355px;
+    width: 400px;
+    z-index: 1;
+}
+
+/*animated titlecards*/
+#Animated-titlecard{
+    height: 460px;
+    background-color: black;
+    position: relative;
+    border-bottom: 6px solid rgb(44, 43, 43);
+}
+.titlecard-image img{
+    position: absolute;
+    height: 334px;
+    width: 446px;
+    top: 7%;
+    left: 4%;
+}
+.animatedtitletext{
+    position: absolute;
+    top:38%;
+    right: 9%;
+}
+.animatedtitletext h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.animatedtitletext p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+.animatedborder{
+    position: absolute;
+    border: 2px solid grey;
+    border-radius: 13px;
+    top: 58%;
+    left: 9%;
+    height: 79px;
+    width: 321px;
+    background: black;
+}
+.animationbox{
+    display: flex;
+}
+.animationbox img{
+    height: 65px;
+    width: 47px;
+    margin: 5px 10px;
+}
+.animationbox p1{
+    margin: 17px 11px;
+    padding: 2px 3px;
+}
+
+.animationbox #downloadanimation{
+    height: 62px;
+    margin-top: 5px;
+    margin-left: 48px;
+}
+
+/*children profile*/
+#childrenprofiles{
+    position: relative;
+    background: #000000;
+    height: 440px;
+
+}
+.children-titlecards h1{
+    position: absolute;
+    top: 40%;
+    left: 9%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.children-titlecards p{
+    position: absolute;
+    top: 47%;
+    left: 8%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+}
+.third-titlecards img{
+    position: absolute;
+    height: 300px;
+    width: 400px;
+    top: 20%;
+    right: 9%;
+}
+
+
+/* utility classes */
+.btn{
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1.1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0.1px 0 rgba(0, 0, 0, 0.45);
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.btn-rounded{
+    border-radius: 5px;
+}
+
+.btn-large{
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    text-transform: none;
+}
+hr{
+    color: rgb(53, 51, 51);
+}
+br{
+    height: 2px;
+}
+
+@media only screen and (max-width: 1200px){
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    .showcase{
+        
+    }
+    .titlecards{
+        position: relative;
+        height: 600px;
+    }
+    .our-titlecards h1{
+        position: absolute;
+        top: 10%;
+        left: 36%;
+    
+    }
+    .our-titlecards p{
+        position: absolute;
+        top: 15%;
+        left: 25%;
+
+    }
+    .first-titlecards{
+        position: absolute;
+        top: 27%;
+        left: 30%;
+    }
+    .first-titlecards::after{
+        position: absolute;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
